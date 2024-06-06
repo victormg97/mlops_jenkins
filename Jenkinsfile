@@ -14,6 +14,22 @@ pipeline {
 
         }
 
+        stage('Install Dependencies') {
+
+            steps {
+
+                sh '''
+
+                   sudo apt-get update
+
+                   sudo apt-get install python3-venv
+
+                '''
+
+            }
+
+        }
+
         stage('Setup Python Environment') {
 
             steps {
